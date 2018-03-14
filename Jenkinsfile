@@ -1,9 +1,8 @@
 node {
   stage('testing') {
-    #!/bin/bash
     checkout scm
     echo "hello"
-    ls
+    sh 'ls'
     echo $BUILD_ID
     echo $JOB_NAME
     echo $JENKINS_HOME
