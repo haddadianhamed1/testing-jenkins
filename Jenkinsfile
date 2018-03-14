@@ -7,6 +7,6 @@ node {
     sh 'echo $JOB_NAME'
     sh 'echo $JENKINS_HOME'
     sh 'AWS_ACCESS_KEY_ID=$accesskey AWS_SECRET_ACCESS_KEY=$secretkey aws s3 sync . s3://app.cherinehaddadian.com --delete'
-    sh 'AWS_ACCESS_KEY_ID=$accesskey AWS_SECRET_ACCESS_KEY=$secretkey aws cloudfront  create-invalidation --distribution-id E1AYAP9D73UP80 --paths "*"'
+    sh 'AWS_ACCESS_KEY_ID=$accesskey AWS_SECRET_ACCESS_KEY=$secretkey aws cloudfront  create-invalidation --distribution-id E1AYAP9D73UP80 --paths "/*"'
   }
 }
