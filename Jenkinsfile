@@ -1,5 +1,6 @@
 node {
   stage('testing') {
+    #!/bin/bash
     checkout scm
     echo "hello"
     ls
